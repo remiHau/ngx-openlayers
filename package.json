@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "yarn build:lib && ng serve",
+    "prebuild": "node scripts/generate-examples-code.js",
     "build:lib": "ng build ngx-openlayers --configuration production",
     "build:demo": "ng build demo-ngx-openlayers",
     "build": "yarn build:lib && yarn build:demo",
@@ -25,7 +26,10 @@
     "@angular/platform-browser": "^18.2.13",
     "@angular/platform-browser-dynamic": "^18.2.13",
     "@angular/router": "^18.2.13",
+    "@stackblitz/sdk": "^1.11.0",
+    "@types/highlight.js": "^10.1.0",
     "hammerjs": "^2.0.8",
+    "highlight.js": "^11.11.1",
     "ol": "~10.5.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.5.0",

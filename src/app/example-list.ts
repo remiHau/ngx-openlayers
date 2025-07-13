@@ -113,7 +113,7 @@ export const examplesList = [
   {
     title: 'UTF Grid',
     description: 'Example of using aol-source-utfgrid. This example display country flag in an overlay on hover',
-    routerLink: 'utf-grid',
+    routerLink: 'utfgrid',
     openLayersLink: 'https://openlayers.org/en/latest/examples/utfgrid.html',
   },
   {

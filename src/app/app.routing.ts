@@ -49,7 +49,7 @@ export const routes: Routes = [
       { path: 'image-wms', component: ImageWMSComponent },
       { path: 'view-projection-update', component: ViewProjectionUpdateComponent },
       { path: 'overview', component: OverviewComponent },
-      { path: 'utf-grid', component: UTFGridComponent },
+      { path: 'utfgrid', component: UTFGridComponent },
       { path: 'image-static', component: ImageStaticComponent },
       { path: 'select-interaction', component: SelectInteractionComponent },
       { path: 'tile-json', component: TileJsonComponent },

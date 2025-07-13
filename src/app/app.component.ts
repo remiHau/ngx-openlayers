@@ -1,11 +1,24 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import {Component, computed, inject} from '@angular/core';
+import {NavigationEnd, Router, RouterLink, RouterOutlet} from '@angular/router';
+import * as data from '../assets/examples-code.json';
+import {toSignal} from '@angular/core/rxjs-interop';
+import {filter, map} from 'rxjs';
+import highlight from 'highlight.js/lib/core';
+import typescript from 'highlight.js/lib/languages/typescript';
+import xml from 'highlight.js/lib/languages/xml';
+import {CodeBlockComponent} from './code-block/code-block.component';
+
+highlight.registerLanguage('typescript', typescript);
+highlight.registerLanguage('xml', xml);
 
 @Component({
     selector: 'app-root',
     template: `
     <header><h1 routerLink="/">ngx-openlayer demo</h1></header>
-    <div class="main-container"><router-outlet></router-outlet></div>
+    <div class="main-container">
+      <router-outlet></router-outlet>
+      <app-code-block></app-code-block>
+    </div>
   `,
     styles: [
         `
@@ -44,6 +57,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     `,
     ],
     standalone: true,
-    imports: [RouterLink, RouterOutlet],
+  imports: [RouterLink, RouterOutlet, CodeBlockComponent],
 })
 export class AppComponent {}

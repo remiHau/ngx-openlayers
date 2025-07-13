@@ -48,7 +48,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/ol/ol.css"
+              "node_modules/ol/ol.css",
+              "node_modules/highlight.js/styles/atom-one-light.css"
             ],
             "scripts": [],
             "extractLicenses": false,
@@ -110,7 +111,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/highlight.js/styles/atom-one-light.css"
             ],
             "scripts": []
           }
